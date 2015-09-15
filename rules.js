@@ -143,6 +143,7 @@ module.exports = function(styles) {
       }
     },
     paragraph: {
+      match: SimpleMarkdown.blockRegex(/^((?:[^\n]+\n?(?!hr|heading|lheading|blockquote|tag|def))+)\n*/),
       react: function(node, output, state) {
         return React.createElement(View, {
           key: state.key,
