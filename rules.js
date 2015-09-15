@@ -187,6 +187,7 @@ module.exports = function(styles) {
       }
     },
     text: {
+      match: SimpleMarkdown.inlineRegex(/^[^\n]+/),
       react: function(node, output, state) {
         // Breaking words up in order to allow for text reflowing in flexbox
         var textStyles = [styles.text];
